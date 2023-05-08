@@ -21,4 +21,9 @@ public class FunRestController {
         return new Greetings(counter.incrementAndGet(), "Hello " + name);
     }
 
+    @GetMapping(value = "/greet")
+    public Greetings greet(@RequestParam(value = "name", defaultValue = "Greet") String name) {
+        return new Greetings(counter.incrementAndGet(), "Hello " + name);
+    }
+
 }
